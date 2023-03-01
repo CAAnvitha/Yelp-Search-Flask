@@ -37,7 +37,7 @@ $("#aca-form-submit").submit(function(e){
         var location = document.getElementById("aca-location").value;
         $.ajax({
             type: 'GET',
-            url: "https://maps.googleapis.com/maps/api/geocode/json?address=" + location + "&key=" + "AIzaSyBY9t-fHVGN_L5pbv0a-gMGVZzfDExT6_w",
+            url: "https://maps.googleapis.com/maps/api/geocode/json?address=" + location + "&key=" + "REPLACE HERE WITH YOU API KEY",
             success: function(data){
                 if (data && data.results && data.results.length > 0 ) {
                     var lat = data.results[0].geometry.location.lat;
