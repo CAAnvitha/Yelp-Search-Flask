@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel='stylesheet' type='text/css' media='screen' href='../static/main.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <section>
+            <div id="aca-search-form">
+                <div id="aca-header">
+                    <span style="font-size: 26px; font-weight: bold;">Business Search</span>
+                    <p style="font-size: 18px; margin-top: 15px;">Fill out the form to get the business near you!</p>
+                </div>
+                <form id="aca-form-submit" action="submit">
+                <div id="aca-form">
+                    <div id="aca-contianer">
+                        <p id="result"></p>
+                        <div class="row1 input-row">
+                            <div><label class="aca-labels">
+                                Keyword
+                            </label> </div>
+                            <div style="width:100%;"><input name="aca-keyword" value="" style="width:100%;" required type="text"/></div>
+                        </div>
+                        <div class="row2 input-row">
+                            <div class="row2-col">
+                                <div> <label class="aca-labels"> Distance(miles)</label></div>
+                               <div style="margin-right: 80px;"> <input type="text" required name="aca-distance" id="aca-distance" value="10"/></div>
+                            </div>
+                            <div>
+                                <div> <label class="aca-labels"> Category</label></div>
+                                <select required name="aca-categories" id="category">
+                                    <option value="all">Default</option>
+                                    <option value="artsAndEntertainment">Arts & Entertainment</option>
+                                    <option value="HealthAndMedical">Health & Medical</option>
+                                    <option value="hotelsAndTravel">Hotels & Travel</option>
+                                    <option value="food">Food</option>
+                                    <option value="professionalServices">Professional Services</option>
+                                 
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row3 input-row">
+                            <div><label class="aca-labels">
+                                Location
+                            </label> </div>
+                            <div><input required name="geo-location" id="aca-location" type="text"/></div>
+                        </div>
+                        <div class="row5 row">
+                            <hr style="border-color: cornflowerblue ; border-width:1px ;">
+                        </div>
+                        <div class="row6">
+                            <div style="display: inline-block;">
+                                <label class="aca-labels">Want us to auto-detect you location? Check here</label>
+                            </div>
+                            <div style="display: inline-block;">
+                                <input type="checkbox" id="aca-checkbox" name="current-location" value="true" style="height: max-content;"/>
+                            </div>
+                        </div>
+                        <div class="row7" style="margin-top: 20px;">
+                            <div class="aca-button-submit-container">
+                                <button id="aca-button-submit" class="aca-buttons" type="submit">SUBMIT</button>
+                            </div>
+                            <div class="aca-button-clear-container">
+                                <button id="aca-button-clear" class="aca-buttons" type="button" onclick="resetForm()">CLEAR</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+
+    </section>
+    <section>
+        <div id="aca-no-records-message">
+            <p style="font-size: 20px; margin: 0px;">No record has been found</p>
+        </div>
+    </section>
+    <section>
+        <div id="aca-table-records" style="text-align: center;">
+        </div>
+    </section>
+    <section>
+        <div id="aca-business-details-card">
+        </div>
+    </section>
+    <script src="../static/myScript.js"></script>
+
+</body>
+</html>
